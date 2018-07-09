@@ -19,8 +19,11 @@ function activate(context) {
         // Display a message box to the user
         vscode.window.showInformationMessage('Hello World!');
     });
-
     context.subscriptions.push(disposable);
+    let saySample = vscode.commands.registerCommand('extension.saySample', function () {
+        vscode.window.showInformationMessage('Hello Sample!');
+    })
+    context.subscriptions.push(saySample);
 }
 exports.activate = activate;
 
