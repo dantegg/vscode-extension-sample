@@ -24,6 +24,9 @@ function activate(context) {
         vscode.window.showInformationMessage('Hello Sample!');
     })
     context.subscriptions.push(saySample);
+    // let terminal = vscode.window.createTerminal({ name: 'stermial'});
+    // terminal.show();
+    // terminal.sendText("hello terminal")
 }
 exports.activate = activate;
 
